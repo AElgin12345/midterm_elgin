@@ -17,20 +17,24 @@
 
 
 body {
-    color: #666666;
-    background-color: #90C7E3;
+    
     font-family: Verdana;
     margin: 0;
-
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image:  linear-gradient(#97c283 2px, transparent 2px), linear-gradient(90deg, #97c283 2px, transparent 2px), linear-gradient(#97c283 1px, transparent 1px), linear-gradient(90deg, #97c283 1px, #e5e5f7 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 
 }
 
 
 header {
     color: #FFFFFF;
-    background-color: #002171;
+    background-color: #718745;
     font-family: Georgia, serif;
     padding: 1em;
+    margin-bottom:0;
 }
 
 
@@ -113,16 +117,17 @@ nav li {
 
  #myself {
     background-image: url(images/myself.jpeg);
-    background-size: 100% 100%;
+    background-size: cover;
+    width: 300px; 
     height: 300px;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
-  
-   
-    
-
-
+    position: absolute;
+    top: 40%; 
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 999;
 }
 
 
@@ -167,9 +172,9 @@ nav li {
 
 
 main {
-    padding: 0 1em;
+    padding: 1em;
     display: block;
-
+    position: relative;
 
 }
 
@@ -183,7 +188,7 @@ h1 {
 
 
 h2 {
-    color: #1976D2;
+    color: #212716;
     font-family: Georgia, serif;
 }
 
@@ -238,6 +243,12 @@ section {
 
 
 
+form {
+    display: flex;
+    flex-direction: column;
+    padding-left: 1em;
+    width: 80%
+}
 
 
 
@@ -303,7 +314,7 @@ section {
     }
 
 
-    #myself #yurthero #trailhero {
+    #myself  {
          background-size: 100% 100%
     }
 }
@@ -341,12 +352,6 @@ th {
 
 
 
-form {
-    display: flex;
-    flex-direction: column;
-    padding-left: 1em;
-    width: 80%
-}
 
 
 input,
@@ -390,7 +395,11 @@ footer {
 
 @media (min-width: 1024px) {
     body {
-         background-image: linear-gradient(to bottom, #FFFFFF 20%, #90C7E3 60%, #FFFFFF 100%);
+        background-color: #e5e5f7;
+        opacity: 0.8;
+        background-image:  linear-gradient(#97c283 2px, transparent 2px), linear-gradient(90deg, #97c283 2px, transparent 2px), linear-gradient(#97c283 1px, transparent 1px), linear-gradient(90deg, #97c283 1px, #e5e5f7 1px);
+        background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+        background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 
 
 
