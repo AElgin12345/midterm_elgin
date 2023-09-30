@@ -7,34 +7,27 @@
 
 #wrapper {
 
-
-
-
     background-color: #FFFFFF;
-
-
 }
 
 
-body {
-    
-    font-family: Verdana;
-    margin: 0;
-    background-color: #e5e5f7;
-    opacity: 0.8;
-    background-image:  linear-gradient(#97c283 2px, transparent 2px), linear-gradient(90deg, #97c283 2px, transparent 2px), linear-gradient(#97c283 1px, transparent 1px), linear-gradient(90deg, #97c283 1px, #e5e5f7 1px);
-    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 
-}
 
 
 header {
     color: #FFFFFF;
     background-color: #718745;
-    font-family: Georgia, serif;
     padding: 1em;
-    margin-bottom:0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    width: 100px;
+    height: auto;
+    margin-left: 10px;
+    border-radius: 50%;
 }
 
 
@@ -56,118 +49,105 @@ header a:visited {
 
 
 header a:hover {
-    color: #90C7E3;
+    color: #446340;
 }
 
 
-nav {
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 
-    font-size: 1.2em;
+.navbar a {
+    float: left;
+    font-size: 16px;
+    color: white;
     text-align: center;
-    background-color: #FFF;
-
-
-
-
-
-
-}
-
-
-nav ul {
-    list-style-type: none;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-}
-
-
-nav a {
+    padding: 14px 16px;
     text-decoration: none;
 }
 
 
-nav a:link {
-    color: #5C7FA3;
+.dropdown {
+    float: left;
+    overflow: hidden;
 }
 
 
-nav a:visited {
-    color: #344873;
+.dropdown .dropbtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
 }
 
 
-nav a:hover {
-    color: #A52A2A;
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+    background-color: red;
 }
 
 
-nav li {
-    padding: .5em 1em;
-    width: 100px;
-    border-bottom: 1px solid #344873;
-
-
-
-
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
 
- #myself {
+.dropdown-content a {
+    float: none;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+body {
+
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: #e5e5f7;
+    opacity: 0.8;
+    background-image: linear-gradient(#97c283 2px, transparent 2px), linear-gradient(90deg, #97c283 2px, transparent 2px), linear-gradient(#97c283 1px, transparent 1px), linear-gradient(90deg, #97c283 1px, #e5e5f7 1px);
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+
+}
+
+#myself {
     background-image: url(images/myself.jpeg);
     background-size: cover;
-    width: 300px; 
+    width: 300px;
     height: 300px;
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 50%;
-    position: absolute;
-    top: 40%; 
-    right: 0;
+    position: relative;
+    top: 50%;
+    right: 0%;
     transform: translateY(-50%);
     z-index: 999;
 }
-
-
-#reshero {
-    background-image: url(images/ocean.jpg);
-    background-size: 200% 100%;
-    height: 300px;
-    background-repeat: no-repeat;
-}
-
-
-#yurthero {
-    background-image: url(images/yurt.jpg);
-    background-size: 200% 100%;
-    height: 300px;
-    background-repeat: no-repeat;
-
-
-
-
-}
-
-
-#trailhero {
-    background-image: url(images/trail.jpg);
-    background-size: 200% 100%;
-    height: 300px;
-    background-repeat: no-repeat;
-
-
-
-
-}
-
-
-
-
-
-
-
 
 
 
@@ -181,7 +161,7 @@ main {
 
 h1 {
     text-align: center;
-    font-size: 1.5em;
+    font-size: 2em;
 
 
 }
@@ -189,23 +169,17 @@ h1 {
 
 h2 {
     color: #212716;
-    font-family: Georgia, serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
 h3 {
-    font-family: Georgia;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 
 dt {
-    color: #002171;
-    font-weight: bold;
-}
-
-
-.contact {
-    color: #002171;
+    color: #62749e;
     font-weight: bold;
 }
 
@@ -243,79 +217,57 @@ section {
 
 
 
-form {
-    display: flex;
-    flex-direction: column;
-    padding-left: 1em;
-    width: 80%
-}
-
-
-
 @media (min-width: 600px) {
     h1 {
-         font-size: 2em;
-         letter-spacing: .25em;
+        font-size: 3em;
+        letter-spacing: .25em;
 
 
     }
 
 
     nav ul {
-         flex-flow: row nowrap;
-         justify-content: space-around;
-         padding-right: 2em;
+        flex-flow: row nowrap;
+        justify-content: space-around;
+        padding-right: 3em;
 
 
     }
 
 
     nav li {
-         width: 12em;
-         border-bottom: none;
+        width: 12em;
+        border-bottom: none;
     }
 
 
     section {
-         padding-left: 2em;
-         padding-right: 2em;
+        padding-left: 2em;
+        padding-right: 2em;
 
 
     }
 
-
-    form {
-         width: 60%;
-         display: grid;
-         grid-gap: 1em;
-         grid-template-columns: 10em 1fr;
-    }
-
-
-    input[type="submit"] {
-         grid-column: 2;
-         width: 9em;
-    }
 
 
     #mobile {
-         display: none;
+        display: none;
     }
 
 
     #desktop {
-         display: inline;
+        display: inline;
     }
 
 
-    #flow {
-         display: flex;
-         flex-direction: row;
+    #column {
+        display: flex;
+        flex-direction: row;
     }
 
 
-    #myself  {
-         background-size: 100% 100%
+    #myself {
+        background-size: 100% 100%
     }
 }
 
@@ -323,7 +275,7 @@ form {
 table {
     margin: 0 auto;
     width: 90%;
-    border: 1px solid #39c;
+    border: 1px solid rgb(154, 211, 167);
     border-collapse: collapse;
 }
 
@@ -336,40 +288,8 @@ th {
 
 }
 
-
-
-
 .text {
     text-align: left;
-}
-
-
-.centered {
-    text-align: center;
-    vertical-align: middle;
-}
-
-
-
-
-
-
-input,
-textarea {
-    margin-bottom: 0.5em;
-}
-
-
-
-
-
-
-
-
-
-
-#reshero {
-    background-size: 100% 100%;
 }
 
 
@@ -395,9 +315,9 @@ footer {
 
 @media (min-width: 1024px) {
     body {
-        background-color: #e5e5f7;
+        background-color: #FFFFFF;
         opacity: 0.8;
-        background-image:  linear-gradient(#97c283 2px, transparent 2px), linear-gradient(90deg, #97c283 2px, transparent 2px), linear-gradient(#97c283 1px, transparent 1px), linear-gradient(90deg, #97c283 1px, #e5e5f7 1px);
+        background-image: linear-gradient(#97c283 2px, transparent 2px), linear-gradient(90deg, #97c283 2px, transparent 2px), linear-gradient(#97c283 1px, transparent 1px), linear-gradient(90deg, #97c283 1px, #e5e5f7 1px);
         background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
         background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
 
@@ -408,14 +328,14 @@ footer {
 
 
     nav ul {
-         padding-left: 10%;
-         padding-right: 10%;
+        padding-left: 10%;
+        padding-right: 10%;
     }
 
 
     #wrapper {
-         margin: auto;
-         width: 80%;
+        margin: auto;
+        width: 100%;
 
 
     }
